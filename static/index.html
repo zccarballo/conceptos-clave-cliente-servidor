@@ -6,10 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/acceso" method="post">
+    <form action="/acceso" method="post" id="formulario">
         <input type="text" name ="nome" placeholder="nome">
         <input type="text" name ="email" placeholder="email">
-        <button type ="submit">Enviar</button>
+        <button id="botonEnviar">Enviar</button>
     </form>
+    <script>
+    //     botonEnviar.addEventListener("click", async (e)=>{
+    //         e.preventDefault();
+    //         // const {nome, email} = formulario; //desestructura o obxecto de entrada
+    //         // console.log(nome.value, email.value); //imprime os valores do formulario
+    //         let datosFormulario = new FormData(formulario);
+    //         console.log("datosFormulario", datosFormulario.entries());
+                        
+    //         let entradas = Object.fromEntries(datosFormulario.entries());
+    //         console.log("entradas", entradas); 
+
+    //         let obxetoEnvio = {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-type":"application/json"
+    //         },
+    //         body: JSON.stringify(entradas)
+    //         }
+
+    //         let respostaServer = await fetch("/acceso", obxetoEnvio)
+           
+    //         let resposta = await respostaServer.json();
+
+    //         console.log(resposta.resposta);
+    //         if(resposta.resposta === "acceso autorizado"){
+    //             console.log("iremos a app")
+    //             location.replace("/app");
+    //         }
+    //         else {
+    //         console.log(resposta.resposta);
+    //         mensagem.innerHTML = resposta.resposta;
+    //         }
+    // })
+    </script>
 </body>
 </html>
