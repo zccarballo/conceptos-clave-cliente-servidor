@@ -10,29 +10,12 @@
     <main></main>
     <button id="sair">Sair</button>
     <script>
-        // localStorage.setItem("usuario", "Tom");
-    (
-    async function(){
-    console.log("boas a todos");
-    const response = await fetch("/enviousuario");
-    const usuario = await response.json();
-    console.log(usuario);
-
-    if(usuario !== "usuario no autorizado"){
-    console.log("usuario.usuario", usuario.usuario);
-    console.log("usuario.usuario.nome", usuario.usuario.nome); 
-    localStorage.setItem("usuario", usuario.usuario.nome) 
-    document.querySelector("main").innerHTML = `<h1> Benvido ${usuario.usuario.nome}</h1>`
-    }
-    }
-    )();
-
-            sair.addEventListener("click", ()=>{
-            console.log("sair");
+      
+        sair.addEventListener("click",()=>{
+            console.log("sair")
             localStorage.removeItem("usuario");
-            //window.location.href = "/";
             location.replace("/");
-            })
+        })
     </script>
 </body>
 </html>
