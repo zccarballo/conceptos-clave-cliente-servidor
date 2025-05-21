@@ -12,11 +12,11 @@ app.use(express.static(path.join(__dirname, "static")));
 app.post("/acceso", (req, res) => {
     const {nome, email} = req.body;// desesctructura o obxeto de entrada
     console.log(nome, email);
-    let condicionUsuarioCorrecto = req.body.nome == 'Israel' && req.body.email == 'israel@israel.com';
+    let condicionUsuarioCorrecto = req.body.nome == 'Zoe' && req.body.email == 'yo@gmail.com';
     let datoEnviadoCondicionUsuarioCorrecto = {
                 resposta:"acesso autorizado",
                 usuario:{
-                    nome:'Israel'
+                    nome:'Zoe'
                 }
             }
     let datoEnviadoEnErro = {resposta:"faltan campos ou usuario non rexistrado"}
