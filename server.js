@@ -1,10 +1,9 @@
 const express = require("express");
 const path = require("path");
 const cors = require('cors');
-const { accesoUser } = require("./0.CONTROLADORES/usuarios");
-//const { accesoUser} = require ("./0.CONTROLADORES/USUARIOS");
-//const { isUser } = require ("./1.MIDDELWARES/USUARIOS");
-//const paxinas = require ("./2.Datos/datos.paxinas");
+const { accesoUser} = require ("./0.CONTROLADORES/USUARIOS");
+const { isUser } = require ("./1.MIDDELWARES/USUARIOS");
+const paxinas = require ("./2.Datos/datos.paxinas");
 const app = express();
 
 //UTILIZO DOTENV: para iso debo escribir a seguinte liña
